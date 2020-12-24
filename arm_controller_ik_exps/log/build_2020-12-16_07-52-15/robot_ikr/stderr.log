@@ -1,0 +1,5 @@
+  File "D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr\Lib\site-packages\robot_ikr\robot_control.py", line 56
+    global angle_data,h,w,
+                         ^
+SyntaxError: invalid syntax
+

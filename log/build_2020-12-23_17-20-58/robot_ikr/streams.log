@@ -1,0 +1,37 @@
+[0.172s] Invoking command in '/acc/arm_controller_ik_exps/src/robot_ikr': PYTHONPATH=/acc/install/robot_ikr/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/robot_ikr build --build-base /acc/build/robot_ikr/build install --prefix /acc/install/robot_ikr --record /acc/build/robot_ikr/install.log --single-version-externally-managed
+[0.317s] running egg_info
+[0.317s] creating ../../../build/robot_ikr/robot_ikr.egg-info
+[0.317s] writing ../../../build/robot_ikr/robot_ikr.egg-info/PKG-INFO
+[0.318s] writing dependency_links to ../../../build/robot_ikr/robot_ikr.egg-info/dependency_links.txt
+[0.318s] writing entry points to ../../../build/robot_ikr/robot_ikr.egg-info/entry_points.txt
+[0.318s] writing requirements to ../../../build/robot_ikr/robot_ikr.egg-info/requires.txt
+[0.318s] writing top-level names to ../../../build/robot_ikr/robot_ikr.egg-info/top_level.txt
+[0.318s] writing manifest file '../../../build/robot_ikr/robot_ikr.egg-info/SOURCES.txt'
+[0.344s] reading manifest file '../../../build/robot_ikr/robot_ikr.egg-info/SOURCES.txt'
+[0.344s] writing manifest file '../../../build/robot_ikr/robot_ikr.egg-info/SOURCES.txt'
+[0.345s] running build
+[0.345s] running build_py
+[0.345s] creating /acc/build/robot_ikr/build
+[0.345s] creating /acc/build/robot_ikr/build/lib
+[0.345s] creating /acc/build/robot_ikr/build/lib/robot_ikr
+[0.345s] copying robot_ikr/robot_control.py -> /acc/build/robot_ikr/build/lib/robot_ikr
+[0.345s] copying robot_ikr/__init__.py -> /acc/build/robot_ikr/build/lib/robot_ikr
+[0.345s] running install
+[0.346s] running install_lib
+[0.346s] creating /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr
+[0.346s] copying /acc/build/robot_ikr/build/lib/robot_ikr/robot_control.py -> /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr
+[0.346s] copying /acc/build/robot_ikr/build/lib/robot_ikr/__init__.py -> /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr
+[0.346s] byte-compiling /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr/robot_control.py to robot_control.cpython-36.pyc
+[0.346s] byte-compiling /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr/__init__.py to __init__.cpython-36.pyc
+[0.346s] running install_data
+[0.347s] creating /acc/install/robot_ikr/share/ament_index
+[0.347s] creating /acc/install/robot_ikr/share/ament_index/resource_index
+[0.347s] creating /acc/install/robot_ikr/share/ament_index/resource_index/packages
+[0.347s] copying resource/robot_ikr -> /acc/install/robot_ikr/share/ament_index/resource_index/packages
+[0.347s] copying package.xml -> /acc/install/robot_ikr/share/robot_ikr
+[0.347s] running install_egg_info
+[0.348s] Copying ../../../build/robot_ikr/robot_ikr.egg-info to /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr-0.0.0-py3.6.egg-info
+[0.348s] running install_scripts
+[0.360s] Installing robot_control script to /acc/install/robot_ikr/lib/robot_ikr
+[0.361s] writing list of installed files to '/acc/build/robot_ikr/install.log'
+[0.373s] Invoked command in '/acc/arm_controller_ik_exps/src/robot_ikr' returned '0': PYTHONPATH=/acc/install/robot_ikr/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../../build/robot_ikr build --build-base /acc/build/robot_ikr/build install --prefix /acc/install/robot_ikr --record /acc/build/robot_ikr/install.log --single-version-externally-managed

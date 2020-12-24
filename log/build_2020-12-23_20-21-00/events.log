@@ -1,0 +1,35 @@
+[0.000000] (-) TimerEvent: {}
+[0.000794] (robot_ikr) JobQueued: {'identifier': 'robot_ikr', 'dependencies': OrderedDict()}
+[0.000914] (robot_ikr) JobStarted: {'identifier': 'robot_ikr'}
+[0.099414] (-) TimerEvent: {}
+[0.195745] (robot_ikr) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../../build/robot_ikr', 'build', '--build-base', '/acc/build/robot_ikr/build', 'install', '--prefix', '/acc/install/robot_ikr', '--record', '/acc/build/robot_ikr/install.log', '--single-version-externally-managed'], 'cwd': '/acc/arm_controller_ik_exps/src/robot_ikr', 'env': {'LIBRARY_PATH': '/usr/local/cuda/lib64/stubs', 'HOSTNAME': 'shovon-PC', 'LD_LIBRARY_PATH': '/opt/ros/dashing/opt/yaml_cpp_vendor/lib:/opt/ros/dashing/opt/rviz_ogre_vendor/lib:/opt/ros/dashing/lib:/usr/lib/x86_64-linux-gnu:/usr/lib/i386-linux-gnu:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/nvidia/lib:/usr/local/nvidia/lib64', 'SHLVL': '1', 'OLDPWD': '/', 'HOME': '/root', 'PYTHONOPTIMIZE': '0', 'ROS_PYTHON_VERSION': '3', 'CUDA_VERSION': '10.2.89', 'COLCON_PREFIX_PATH': '/acc/install', 'ROS_DISTRO': 'dashing', 'NVIDIA_REQUIRE_CUDA': 'cuda>=10.2 brand=tesla,driver>=396,driver<397 brand=tesla,driver>=410,driver<411 brand=tesla,driver>=418,driver<419 brand=tesla,driver>=440,driver<441', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'compute,utility,graphics,compat32,utility,display', 'TERM': 'xterm', 'PATH': '/opt/ros/dashing/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'CUDA_PKG_VERSION': '10-2=10.2.89-1', 'DISPLAY': 'unix:0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/acc/install/robot_ikr:/opt/ros/dashing', 'ROS_DOMAIN_ID': '52', 'DEBIAN_FRONTEND': 'noninteractive', 'PWD': '/acc/build/robot_ikr', 'PYTHONPATH': '/acc/install/robot_ikr/lib/python3.6/site-packages:/acc/install/robot_ikr/lib/python3.6/site-packages:/opt/ros/dashing/lib/python3.6/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'NCCL_VERSION': '2.7.8', 'COLCON': '1'}, 'shell': False}
+[0.199473] (-) TimerEvent: {}
+[0.299731] (-) TimerEvent: {}
+[0.366025] (robot_ikr) StdoutLine: {'line': b'running egg_info\n'}
+[0.366443] (robot_ikr) StdoutLine: {'line': b'writing ../../../build/robot_ikr/robot_ikr.egg-info/PKG-INFO\n'}
+[0.366613] (robot_ikr) StdoutLine: {'line': b'writing dependency_links to ../../../build/robot_ikr/robot_ikr.egg-info/dependency_links.txt\n'}
+[0.366760] (robot_ikr) StdoutLine: {'line': b'writing entry points to ../../../build/robot_ikr/robot_ikr.egg-info/entry_points.txt\n'}
+[0.366899] (robot_ikr) StdoutLine: {'line': b'writing requirements to ../../../build/robot_ikr/robot_ikr.egg-info/requires.txt\n'}
+[0.367015] (robot_ikr) StdoutLine: {'line': b'writing top-level names to ../../../build/robot_ikr/robot_ikr.egg-info/top_level.txt\n'}
+[0.390522] (robot_ikr) StdoutLine: {'line': b"reading manifest file '../../../build/robot_ikr/robot_ikr.egg-info/SOURCES.txt'\n"}
+[0.391335] (robot_ikr) StdoutLine: {'line': b"writing manifest file '../../../build/robot_ikr/robot_ikr.egg-info/SOURCES.txt'\n"}
+[0.391452] (robot_ikr) StdoutLine: {'line': b'running build\n'}
+[0.391557] (robot_ikr) StdoutLine: {'line': b'running build_py\n'}
+[0.391742] (robot_ikr) StdoutLine: {'line': b'copying robot_ikr/robot_control.py -> /acc/build/robot_ikr/build/lib/robot_ikr\n'}
+[0.391849] (robot_ikr) StdoutLine: {'line': b'running install\n'}
+[0.391981] (robot_ikr) StdoutLine: {'line': b'running install_lib\n'}
+[0.392257] (robot_ikr) StdoutLine: {'line': b'copying /acc/build/robot_ikr/build/lib/robot_ikr/robot_control.py -> /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr\n'}
+[0.392709] (robot_ikr) StdoutLine: {'line': b"writing byte-compilation script '/tmp/tmpzbrxc2ad.py'\n"}
+[0.392856] (robot_ikr) StdoutLine: {'line': b'/usr/bin/python3 -O /tmp/tmpzbrxc2ad.py\n'}
+[0.399799] (-) TimerEvent: {}
+[0.422384] (robot_ikr) StdoutLine: {'line': b'removing /tmp/tmpzbrxc2ad.py\n'}
+[0.422549] (robot_ikr) StdoutLine: {'line': b'running install_data\n'}
+[0.423180] (robot_ikr) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.425248] (robot_ikr) StdoutLine: {'line': b"removing '/acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr-0.0.0-py3.6.egg-info' (and everything under it)\n"}
+[0.425544] (robot_ikr) StdoutLine: {'line': b'Copying ../../../build/robot_ikr/robot_ikr.egg-info to /acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr-0.0.0-py3.6.egg-info\n'}
+[0.426397] (robot_ikr) StdoutLine: {'line': b'running install_scripts\n'}
+[0.442788] (robot_ikr) StdoutLine: {'line': b'Installing robot_control script to /acc/install/robot_ikr/lib/robot_ikr\n'}
+[0.443060] (robot_ikr) StdoutLine: {'line': b"writing list of installed files to '/acc/build/robot_ikr/install.log'\n"}
+[0.456123] (robot_ikr) CommandEnded: {'returncode': 0}
+[0.469231] (robot_ikr) JobEnded: {'identifier': 'robot_ikr', 'rc': 0}
+[0.470002] (-) EventReactorShutdown: {}

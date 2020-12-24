@@ -1,0 +1,5 @@
+  File "/acc/install/robot_ikr/lib/python3.6/site-packages/robot_ikr/robot_control.py", line 22
+    return (p_left.x<self.x<p_right.x) and (p_left.y<self.y<p_right.y):
+                                                                      ^
+SyntaxError: invalid syntax
+
