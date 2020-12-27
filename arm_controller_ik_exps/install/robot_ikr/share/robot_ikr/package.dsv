@@ -1,6 +1,6 @@
-source;share\robot_ikr\hook\pythonpath.ps1
-source;share\robot_ikr\hook\pythonpath.bat
-source;share\robot_ikr\hook\pythonpath.dsv
-source;share\robot_ikr\hook\ament_prefix_path.ps1
-source;share\robot_ikr\hook\ament_prefix_path.bat
-source;share\robot_ikr\hook\ament_prefix_path.dsv
+source;share/robot_ikr/hook/pythonpath.ps1
+source;share/robot_ikr/hook/pythonpath.dsv
+source;share/robot_ikr/hook/pythonpath.sh
+source;share/robot_ikr/hook/ament_prefix_path.ps1
+source;share/robot_ikr/hook/ament_prefix_path.dsv
+source;share/robot_ikr/hook/ament_prefix_path.sh

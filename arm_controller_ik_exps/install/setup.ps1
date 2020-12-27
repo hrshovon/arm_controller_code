@@ -22,9 +22,7 @@ function _colcon_prefix_chain_powershell_source_script {
 }
 
 # source chained prefixes
-_colcon_prefix_chain_powershell_source_script "C:\ros2_dashing\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "C:\ros2_dashing\\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "D:\arm_controller_code\arm_controller_ik_exps\install\\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/opt/ros/dashing\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

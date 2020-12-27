@@ -1,0 +1,3 @@
+[console_scripts]
+robot_control = ros2_rsv.ros2_realsense_viewer:main
+

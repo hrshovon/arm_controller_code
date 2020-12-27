@@ -1,0 +1,21 @@
+[0.385s] Invoking command in '/acc/arm_controller_ik_exps/src/robot_ikr': PYTHONPATH=/acc/arm_controller_ik_exps/install/robot_ikr/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_ikr build --build-base /acc/arm_controller_ik_exps/build/robot_ikr/build install --prefix /acc/arm_controller_ik_exps/install/robot_ikr --record /acc/arm_controller_ik_exps/build/robot_ikr/install.log --single-version-externally-managed
+[0.538s] running egg_info
+[0.538s] writing ../../build/robot_ikr/robot_ikr.egg-info/PKG-INFO
+[0.538s] writing dependency_links to ../../build/robot_ikr/robot_ikr.egg-info/dependency_links.txt
+[0.539s] writing entry points to ../../build/robot_ikr/robot_ikr.egg-info/entry_points.txt
+[0.539s] writing requirements to ../../build/robot_ikr/robot_ikr.egg-info/requires.txt
+[0.539s] writing top-level names to ../../build/robot_ikr/robot_ikr.egg-info/top_level.txt
+[0.559s] reading manifest file '../../build/robot_ikr/robot_ikr.egg-info/SOURCES.txt'
+[0.560s] writing manifest file '../../build/robot_ikr/robot_ikr.egg-info/SOURCES.txt'
+[0.560s] running build
+[0.560s] running build_py
+[0.560s] running install
+[0.560s] running install_lib
+[0.561s] running install_data
+[0.561s] running install_egg_info
+[0.562s] removing '/acc/arm_controller_ik_exps/install/robot_ikr/lib/python3.6/site-packages/robot_ikr-0.0.0-py3.6.egg-info' (and everything under it)
+[0.562s] Copying ../../build/robot_ikr/robot_ikr.egg-info to /acc/arm_controller_ik_exps/install/robot_ikr/lib/python3.6/site-packages/robot_ikr-0.0.0-py3.6.egg-info
+[0.563s] running install_scripts
+[0.573s] Installing robot_control script to /acc/arm_controller_ik_exps/install/robot_ikr/lib/robot_ikr
+[0.573s] writing list of installed files to '/acc/arm_controller_ik_exps/build/robot_ikr/install.log'
+[0.584s] Invoked command in '/acc/arm_controller_ik_exps/src/robot_ikr' returned '0': PYTHONPATH=/acc/arm_controller_ik_exps/install/robot_ikr/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robot_ikr build --build-base /acc/arm_controller_ik_exps/build/robot_ikr/build install --prefix /acc/arm_controller_ik_exps/install/robot_ikr --record /acc/arm_controller_ik_exps/build/robot_ikr/install.log --single-version-externally-managed
