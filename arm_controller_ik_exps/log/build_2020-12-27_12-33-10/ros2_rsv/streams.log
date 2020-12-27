@@ -1,0 +1,38 @@
+[0.610s] Invoking command in 'D:\arm_controller_code\arm_controller_ik_exps\src\ros2_rsv': PYTHONPATH=D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base ..\..\build\ros2_rsv build --build-base D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build install --prefix D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv --record D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\install.log --single-version-externally-managed
+[0.875s] running egg_info
+[0.875s] creating ..\..\build\ros2_rsv\ros2_rsv.egg-info
+[0.875s] writing ..\..\build\ros2_rsv\ros2_rsv.egg-info\PKG-INFO
+[0.875s] writing dependency_links to ..\..\build\ros2_rsv\ros2_rsv.egg-info\dependency_links.txt
+[0.875s] writing entry points to ..\..\build\ros2_rsv\ros2_rsv.egg-info\entry_points.txt
+[0.875s] writing requirements to ..\..\build\ros2_rsv\ros2_rsv.egg-info\requires.txt
+[0.875s] writing top-level names to ..\..\build\ros2_rsv\ros2_rsv.egg-info\top_level.txt
+[0.875s] writing manifest file '..\..\build\ros2_rsv\ros2_rsv.egg-info\SOURCES.txt'
+[0.891s] reading manifest file '..\..\build\ros2_rsv\ros2_rsv.egg-info\SOURCES.txt'
+[0.891s] writing manifest file '..\..\build\ros2_rsv\ros2_rsv.egg-info\SOURCES.txt'
+[0.891s] running build
+[0.891s] running build_py
+[0.891s] creating D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build
+[0.891s] creating D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build\lib
+[0.891s] creating D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build\lib\ros2_rsv
+[0.907s] copying ros2_rsv\ros2_realsense_viewer.py -> D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build\lib\ros2_rsv
+[0.907s] copying ros2_rsv\__init__.py -> D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build\lib\ros2_rsv
+[0.907s] running install
+[0.907s] running install_lib
+[0.907s] creating D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages\ros2_rsv
+[0.907s] copying D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build\lib\ros2_rsv\ros2_realsense_viewer.py -> D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages\ros2_rsv
+[0.922s] copying D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build\lib\ros2_rsv\__init__.py -> D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages\ros2_rsv
+[0.922s] byte-compiling D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages\ros2_rsv\ros2_realsense_viewer.py to ros2_realsense_viewer.cpython-37.pyc
+[0.922s] byte-compiling D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages\ros2_rsv\__init__.py to __init__.cpython-37.pyc
+[0.922s] running install_data
+[0.922s] creating D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\share\ament_index
+[0.922s] creating D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\share\ament_index\resource_index
+[0.922s] creating D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\share\ament_index\resource_index\packages
+[0.922s] copying resource\ros2_rsv -> D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\share\ament_index\resource_index\packages
+[0.922s] copying package.xml -> D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\share\ros2_rsv
+[0.922s] running install_egg_info
+[0.922s] Copying ..\..\build\ros2_rsv\ros2_rsv.egg-info to D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages\ros2_rsv-0.0.0-py3.7.egg-info
+[0.938s] running install_scripts
+[0.953s] Installing robot_control-script.py script to D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\lib\ros2_rsv
+[0.953s] Installing robot_control.exe script to D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\lib\ros2_rsv
+[0.953s] writing list of installed files to 'D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\install.log'
+[1.016s] Invoked command in 'D:\arm_controller_code\arm_controller_ik_exps\src\ros2_rsv' returned '0': PYTHONPATH=D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base ..\..\build\ros2_rsv build --build-base D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\build install --prefix D:\arm_controller_code\arm_controller_ik_exps\install\ros2_rsv --record D:\arm_controller_code\arm_controller_ik_exps\build\ros2_rsv\install.log --single-version-externally-managed

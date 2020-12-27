@@ -1,0 +1,22 @@
+[0.344s] Invoking command in 'D:\arm_controller_code\arm_controller_ik_exps\src\robot_ikr': PYTHONPATH=D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base ..\..\build\robot_ikr build --build-base D:\arm_controller_code\arm_controller_ik_exps\build\robot_ikr\build install --prefix D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr --record D:\arm_controller_code\arm_controller_ik_exps\build\robot_ikr\install.log --single-version-externally-managed
+[0.594s] running egg_info
+[0.594s] writing ..\..\build\robot_ikr\robot_ikr.egg-info\PKG-INFO
+[0.594s] writing dependency_links to ..\..\build\robot_ikr\robot_ikr.egg-info\dependency_links.txt
+[0.594s] writing entry points to ..\..\build\robot_ikr\robot_ikr.egg-info\entry_points.txt
+[0.594s] writing requirements to ..\..\build\robot_ikr\robot_ikr.egg-info\requires.txt
+[0.594s] writing top-level names to ..\..\build\robot_ikr\robot_ikr.egg-info\top_level.txt
+[0.610s] reading manifest file '..\..\build\robot_ikr\robot_ikr.egg-info\SOURCES.txt'
+[0.610s] writing manifest file '..\..\build\robot_ikr\robot_ikr.egg-info\SOURCES.txt'
+[0.610s] running build
+[0.610s] running build_py
+[0.610s] running install
+[0.610s] running install_lib
+[0.610s] running install_data
+[0.610s] running install_egg_info
+[0.610s] removing 'D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr\Lib\site-packages\robot_ikr-0.0.0-py3.7.egg-info' (and everything under it)
+[0.610s] Copying ..\..\build\robot_ikr\robot_ikr.egg-info to D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr\Lib\site-packages\robot_ikr-0.0.0-py3.7.egg-info
+[0.625s] running install_scripts
+[0.641s] Installing robot_control-script.py script to D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr\lib\robot_ikr
+[0.641s] Installing robot_control.exe script to D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr\lib\robot_ikr
+[0.641s] writing list of installed files to 'D:\arm_controller_code\arm_controller_ik_exps\build\robot_ikr\install.log'
+[0.672s] Invoked command in 'D:\arm_controller_code\arm_controller_ik_exps\src\robot_ikr' returned '0': PYTHONPATH=D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr\Lib\site-packages;%PYTHONPATH% c:\python37\python.exe setup.py egg_info --egg-base ..\..\build\robot_ikr build --build-base D:\arm_controller_code\arm_controller_ik_exps\build\robot_ikr\build install --prefix D:\arm_controller_code\arm_controller_ik_exps\install\robot_ikr --record D:\arm_controller_code\arm_controller_ik_exps\build\robot_ikr\install.log --single-version-externally-managed

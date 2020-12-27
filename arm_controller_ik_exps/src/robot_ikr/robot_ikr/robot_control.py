@@ -38,45 +38,86 @@ prev_angle_data=[0,0,0,0]
 mouse_coords=point(0,0)
 set_angle=False
 h, w = 1200,800
-    
+
 arm_base_pos = point(w-50,h-450)
 base_length = 120
 arm_length = 200
 elbow_length = 200
 point_ok = False
+is_base = False
+
 base_control_bbox_coords =  rectangle(point(w-310,10),
                                       point(w-10,310)) #((w-310,10),(w-10,310)) 
 base_control_circle_center = base_control_bbox_coords.get_center() 
 #((base_control_bbox_coords[0][0]+base_control_bbox_coords[1][0])//2,
 # (base_control_bbox_coords[0][1]+base_control_bbox_coords[1][1])//2)
 
+publisher = None
+
 def calcdist(p1,p2):
     return sqrt((p1.x-p2.x)**2+(p1.y-p2.y)**2)
 
-#def get_target_angle(mouse_p,is_base=False):
+def calc_base(y,x):
+    angle = atan2(y,x)
+    if angle<0:
+        if angle < -pi/6:
+            angle = (7*pi/6)+(pi-abs(angle))
+        else:
+            angle = (pi/6)-abs(angle)
+    else:
+        angle = angle + (pi/6)
+    return angle    
+def get_target_angle(mouse_p,is_base=False):
     '''
     we have mouse_p which is our target point
     we have length of each arm
     if its base then we do calculation for base
     if its arm we dp calculation for arm
     '''
+    is_okay=True
     #base_length = 
-    #if is_base==False:
-    #    arm_angle = 
-
+    if is_base==False:
+        base_dist = calcdist(mouse_p,arm_base_pos)
+        y_dist = arm_base_pos.y-mouse_p.y
+        offset_angle = degrees(atan(y_dist/base_dist))
+        elbow_angle = degrees(acos((arm_length**2+elbow_length**2-base_dist**2)/(2*arm_length*elbow_length)))-90
+        arm_angle = degrees(acos((arm_length**2+base_dist**2-elbow_length**2)/(2*arm_length*base_dist)))+offset_angle
+        if arm_angle<0 or elbow_angle<0:
+            is_okay=False
+        #print(arm_angle,elbow_angle,offset_angle)
+        return is_okay,int(arm_angle),int(elbow_angle)
+    else:
+       dist_x = mouse_p.x-base_control_circle_center.x 
+       dist_y = -(mouse_p.y-base_control_circle_center.y) 
+       base_angle = degrees(calc_base(dist_y,dist_x)) #-30
+       if base_angle>240:
+           is_okay=False
+       return is_okay, base_angle 
 def handle_mouse_events(event, x, y, flags, param):
-    global mouse_coords,point_ok
+    global mouse_coords,point_ok,is_base
     if event==cv2.EVENT_LBUTTONDOWN:
         point_ok=False
         mouse_coords=point(x,y)
         #check if within base control
         if mouse_coords.check_if_within_rectangle(base_control_bbox_coords)==True:
             print("base control")
+            is_base=True
+            is_okay, base_angle = get_target_angle(mouse_coords,is_base=True)
+            if is_okay==True:
+                data_out = np.array([base_angle,250,250,250,250],dtype=np.float32)
+                publisher.publish(Float32MultiArray(data=data_out))
         else:
             print("arm control")
             if calcdist(mouse_coords,arm_base_pos) <= arm_length+elbow_length:
-                
-                point_ok=True
+                if mouse_coords.x<arm_base_pos.x:
+                    if calcdist(mouse_coords,arm_base_pos)**2>=(arm_length**2+elbow_length**2):
+                        point_ok=True
+                        is_base=False
+                        is_okay, arm_angle, elbow_angle = get_target_angle(mouse_coords)
+                        if is_okay==True:
+                            data_out = np.array([250,arm_angle,elbow_angle,250,250],dtype=np.float32)
+                            publisher.publish(Float32MultiArray(data=data_out))
+
             
 def draw_position(img,base_control_circle_center, arm_base_pos, angle_data):
     #draw base position indicator hand
@@ -119,62 +160,57 @@ def draw_position(img,base_control_circle_center, arm_base_pos, angle_data):
                   (255,255,255),
                   2)
 
-class botSubscriber(Node):
-
-    def __init__(self):
-        super().__init__('robot_ui')
-        self.subscription = self.create_subscription(
-            Float32MultiArray,
-            'robot_sensor_data',
-            self.listener_callback)
-        self.subscription  # prevent unused variable warning
-        
-
-    def listener_callback(self, msg):
-        global angle_data,h,w,prev_angle_data, arm_base_pos, base_control_bbox_coords, base_control_circle_center
-        angle_data=msg.data
-        
-        img_blank = np.zeros((h,w,3),dtype=np.uint8)
-        cv2.rectangle(img_blank,
-                      (base_control_bbox_coords.p1.x,base_control_bbox_coords.p1.y),
-                      (base_control_bbox_coords.p2.x,base_control_bbox_coords.p2.y),
-                      (0,255,0),
-                      2)
-        cv2.circle(img_blank,
-                   (base_control_circle_center.x,base_control_circle_center.y),
-                   140,
-                   (0,0,255),
-                   2)
-        try:
-            if len(angle_data)==4:
-                draw_position(img_blank,base_control_circle_center,arm_base_pos,angle_data)
-                prev_angle_data=copy.copy(angle_data)
-            else:
-                draw_position(img_blank,base_control_circle_center,arm_base_pos,prev_angle_data)    
-        except:
-            draw_position(img_blank,base_control_circle_center,arm_base_pos,prev_angle_data)
-        cv2.imshow("controller_window",img_blank)
-        cv2.waitKey(10) # & 0xFF == ord('q'):
-            #break 
-        
+def listener_callback(msg):
+    global angle_data,h,w,prev_angle_data, arm_base_pos, base_control_bbox_coords, base_control_circle_center
+    angle_data=msg.data
+    
+    img_blank = np.zeros((h,w,3),dtype=np.uint8)
+    cv2.rectangle(img_blank,
+                    (base_control_bbox_coords.p1.x,base_control_bbox_coords.p1.y),
+                    (base_control_bbox_coords.p2.x,base_control_bbox_coords.p2.y),
+                    (0,255,0),
+                    2)
+    cv2.circle(img_blank,
+                (base_control_circle_center.x,base_control_circle_center.y),
+                140,
+                (0,0,255),
+                2)
+    try:
+        if len(angle_data)==4:
+            draw_position(img_blank,base_control_circle_center,arm_base_pos,angle_data)
+            prev_angle_data=copy.copy(angle_data)
+        else:
+            draw_position(img_blank,base_control_circle_center,arm_base_pos,prev_angle_data)    
+    except:
+        draw_position(img_blank,base_control_circle_center,arm_base_pos,prev_angle_data)
+    cv2.imshow("controller_window",img_blank)
+    cv2.waitKey(10) # & 0xFF == ord('q'):
+        #break 
+    
 
 
 def main(args=None):
-    
+    global publisher
     cv2.namedWindow("controller_window")
     cv2.setMouseCallback("controller_window",handle_mouse_events,param=12)
     rclpy.init(args=args)
 
-    bot_subscriber = botSubscriber()
+    #bot_subscriber = botSubscriber()
 
-   
+    node = rclpy.create_node('robot_controller_node')
+    publisher = node.create_publisher(Float32MultiArray, 'robot_command')
+    subscriber = node.create_subscription(
+            Float32MultiArray,
+            '/robot_sensor_data',
+            listener_callback)
+
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
     while rclpy.ok():
-        rclpy.spin_once(bot_subscriber)
-    bot_subscriber.destroy_node()
+        rclpy.spin_once(node)
+    node.destroy_node()
     rclpy.shutdown()
 
     cv2.destroyAllWindows()

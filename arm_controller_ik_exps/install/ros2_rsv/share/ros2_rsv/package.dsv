@@ -1,0 +1,6 @@
+source;share\ros2_rsv\hook\pythonpath.ps1
+source;share\ros2_rsv\hook\pythonpath.bat
+source;share\ros2_rsv\hook\pythonpath.dsv
+source;share\ros2_rsv\hook\ament_prefix_path.ps1
+source;share\ros2_rsv\hook\ament_prefix_path.bat
+source;share\ros2_rsv\hook\ament_prefix_path.dsv
